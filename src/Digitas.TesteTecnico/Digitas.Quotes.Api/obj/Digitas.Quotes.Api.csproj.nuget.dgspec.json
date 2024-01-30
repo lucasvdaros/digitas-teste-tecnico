@@ -1,0 +1,285 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Api\\Digitas.Quotes.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Api\\Digitas.Quotes.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Api\\Digitas.Quotes.Api.csproj",
+        "projectName": "Digitas.Quotes.Api",
+        "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Api\\Digitas.Quotes.Api.csproj",
+        "packagesPath": "C:\\Users\\lucas.daros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas.daros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj": {
+                "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj"
+              },
+              "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\Digitas.Quotes.Infra.csproj": {
+                "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\Digitas.Quotes.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.18.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj",
+        "projectName": "Digitas.Quotes.Application",
+        "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj",
+        "packagesPath": "C:\\Users\\lucas.daros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas.daros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\Digitas.Quotes.Domain.csproj": {
+                "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\Digitas.Quotes.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\Digitas.Quotes.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\Digitas.Quotes.Domain.csproj",
+        "projectName": "Digitas.Quotes.Domain",
+        "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\Digitas.Quotes.Domain.csproj",
+        "packagesPath": "C:\\Users\\lucas.daros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas.daros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\Digitas.Quotes.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\Digitas.Quotes.Infra.csproj",
+        "projectName": "Digitas.Quotes.Infra",
+        "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\Digitas.Quotes.Infra.csproj",
+        "packagesPath": "C:\\Users\\lucas.daros\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lucas.daros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj": {
+                "projectPath": "C:\\Users\\lucas.daros\\Documents\\Projetos\\digitas-teste-tecnico\\src\\Digitas.TesteTecnico\\Digitas.Quotes.Application\\Digitas.Quotes.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

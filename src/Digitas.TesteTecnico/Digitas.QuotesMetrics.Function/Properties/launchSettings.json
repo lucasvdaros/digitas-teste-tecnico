@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Digitas.QuotesMetrics.Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7173"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 32407,
+      "useSSL": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Quoutes.Metrics.Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7198"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 33580,
+      "useSSL": false
+    }
+  }
+}

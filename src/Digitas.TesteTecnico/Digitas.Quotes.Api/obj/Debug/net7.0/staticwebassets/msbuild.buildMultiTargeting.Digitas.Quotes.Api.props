@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Digitas.Quotes.Api.props" />
+</Project>

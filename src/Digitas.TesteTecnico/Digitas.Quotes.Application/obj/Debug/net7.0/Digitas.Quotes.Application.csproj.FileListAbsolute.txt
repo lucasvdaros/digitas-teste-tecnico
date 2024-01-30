@@ -1,0 +1,15 @@
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\bin\Debug\net7.0\Digitas.Quotes.Application.deps.json
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\bin\Debug\net7.0\Digitas.Quotes.Application.dll
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\bin\Debug\net7.0\Digitas.Quotes.Application.pdb
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\bin\Debug\net7.0\Digitas.Quotes.Domain.dll
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\bin\Debug\net7.0\Digitas.Quotes.Domain.pdb
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.csproj.AssemblyReference.cache
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.AssemblyInfoInputs.cache
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.AssemblyInfo.cs
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.csproj.CoreCompileInputs.cache
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.csproj.CopyComplete
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.dll
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\refint\Digitas.Quotes.Application.dll
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\Digitas.Quotes.Application.pdb
+C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Application\obj\Debug\net7.0\ref\Digitas.Quotes.Application.dll
