@@ -10,3 +10,15 @@ C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas
 C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\refint\Digitas.Quotes.Domain.dll
 C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.pdb
 C:\Users\lucas.daros\Documents\Projetos\Digitas\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\ref\Digitas.Quotes.Domain.dll
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\bin\Debug\net7.0\Digitas.Quotes.Domain.deps.json
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\bin\Debug\net7.0\Digitas.Quotes.Domain.dll
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\bin\Debug\net7.0\Digitas.Quotes.Domain.pdb
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.csproj.AssemblyReference.cache
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.AssemblyInfoInputs.cache
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.AssemblyInfo.cs
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.dll
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\refint\Digitas.Quotes.Domain.dll
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\Digitas.Quotes.Domain.pdb
+C:\Users\lucas.daros\Documents\Projetos\digitas-teste-tecnico\src\Digitas.TesteTecnico\Digitas.Quotes.Domain\obj\Debug\net7.0\ref\Digitas.Quotes.Domain.dll
