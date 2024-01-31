@@ -2,5 +2,6 @@
 
 public interface ILiveOrderBookService
 {
-    Task SearchCurrentBtcBookOffers();
+    Task<bool> ConnectToBitStampWebSocket();
+    Task<bool> IsSubscribedChannel(string channel);
 }

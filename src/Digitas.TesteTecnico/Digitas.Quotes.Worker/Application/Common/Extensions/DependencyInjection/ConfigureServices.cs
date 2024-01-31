@@ -10,9 +10,11 @@ public static class ConfigureServices
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         services.AddTransient<WorkerInitializerJob>();
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));        
 
         services.AddScoped<ILiveOrderBookService, LiveOrderBookService>();
+        services.AddScoped<IBtcService, BtcService>();
+        services.AddScoped<IEthService, EthService>();
 
         return services;
     }

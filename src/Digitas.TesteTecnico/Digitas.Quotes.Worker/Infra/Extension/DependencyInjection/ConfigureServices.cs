@@ -42,6 +42,8 @@ public static class ConfigureServices
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBtcAskRepository, BtcAskRepository>();
         services.AddScoped<IBtcBidRepository, BtcBidRepository>();
+        services.AddScoped<IEthBidRepository, EthBidRepository>();
+        services.AddScoped<IEthAskRepository, EthAskRepository>();
 
         return services;
     }

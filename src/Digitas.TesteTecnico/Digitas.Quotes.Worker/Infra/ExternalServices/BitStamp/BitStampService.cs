@@ -18,19 +18,24 @@ public class BitStampService : IBitStampService
 
         urlBitStamp = configuration.GetValue<string>("urlBitStampWebSocket")!;
         bitStampWs = new ClientWebSocket();
-    }
+    }    
 
     public async Task<bool> IsConnectToBitStampWebSocket()
     {
         try
         {
-            var uri = new Uri(urlBitStamp);
+            if(bitStampWs.State != WebSocketState.Open)
+            {
+                var uri = new Uri(urlBitStamp);
 
-            await bitStampWs.ConnectAsync(uri, CancellationToken.None);
+                await bitStampWs.ConnectAsync(uri, CancellationToken.None);
 
-            logger.LogInformation($"Connection State: {bitStampWs.State}\n");
+                logger.LogInformation($"Connection State: {bitStampWs.State}\n");
 
-            return bitStampWs.State == WebSocketState.Open;
+                return bitStampWs.State == WebSocketState.Open;
+            }
+
+            return true;            
         }
         catch (Exception ex)
         {

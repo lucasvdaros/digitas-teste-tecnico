@@ -2,7 +2,7 @@
 
 public interface IBitStampService
 {
-    Task<bool> IsConnectToBitStampWebSocket();
+    Task<bool> IsConnectToBitStampWebSocket();    
     Task<string> SubscribeChannel(byte[] buffer);
     Task<string> ReceivedMessage();
     bool IsConnectionStillOpen();

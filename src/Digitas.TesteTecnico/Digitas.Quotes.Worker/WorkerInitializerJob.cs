@@ -17,11 +17,24 @@ internal class WorkerInitializerJob
 
     public async Task ExecuteAsync()
     {
-
         logger.LogInformation(message: $"Start process");
 
-        await mediator.Send(new LoadQuoteBtcCommand());
+        var IsWebSocketConnected = await mediator.Send(new OpenBitstampConnectionCommand());
 
-        //await mediator.Send(new LoadQuoteBTCCommand(Coin.ETH));        
+        if (IsWebSocketConnected)
+        {
+            logger.LogInformation(message: $"Web Socket Connected!");
+
+            //await Task.WhenAll(mediator.Send(new LoadQuoteBtcCommand()),
+            //                   mediator.Send(new LoadQuoteEthCommand()));
+
+            //await mediator.Send(new LoadQuoteBtcCommand());
+
+            await mediator.Send(new LoadQuoteEthCommand());
+        }
+        else
+        {
+            logger.LogError(message: "Falha ao se conectar com o Bitstamp websocket");
+        }
     }
 }
