@@ -22,6 +22,7 @@ public class BtcAskMap : IEntityTypeConfiguration<BtcAsk>
 
         builder.Property(c => c.Amount)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("Amount");
     }
 }

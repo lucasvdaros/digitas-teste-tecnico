@@ -31,7 +31,7 @@ public class BtcQuotesService : IBtcQuotesService
             SmallestUsdValue = smallestUsdValue,
             AvgUsdValue = avgUsdValue,
             AvgLastFiveMinutesUsdValue = avgLastFiveMinutesUsdValue,
-            AvgAmount = avgAmount
+            AvgAmount = Math.Round(avgAmount, 8, MidpointRounding.AwayFromZero) 
         };
     }
 
@@ -39,7 +39,12 @@ public class BtcQuotesService : IBtcQuotesService
     private static int SmallestUsdValue(List<BtcAsk> ethAsks) => ethAsks.Min(eth => eth.UsdValue);
     private static decimal AvgUsdValue(List<BtcAsk> ethAsks)
     {
-        var totalUsdValue = ethAsks.Sum(eth => eth.UsdValue);
+        long totalUsdValue = 0;
+
+        foreach(var ethAsk in ethAsks)
+        {
+            totalUsdValue += ethAsk.UsdValue;
+        }
 
         return ethAsks.Count != 0 ? totalUsdValue / ethAsks.Count : 0;
     }

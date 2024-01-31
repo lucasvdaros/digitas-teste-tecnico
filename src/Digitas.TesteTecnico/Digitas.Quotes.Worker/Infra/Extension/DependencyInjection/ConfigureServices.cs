@@ -24,8 +24,8 @@ public static class ConfigureServices
 
     private static IServiceCollection AddDatabaseServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>             
-             options.UseSqlServer("Data Source=N1003729\\SQLEXPRESS;Initial Catalog=quotes;TrustServerCertificate=True;Persist Security Info=True;User ID=user_digitas_db;Password=senhalegal123",
+        services.AddDbContext<ApplicationDbContext>(options =>                          
+             options.UseSqlServer(configuration.GetConnectionString("QuotesDb"),
          builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
         return services;

@@ -27,16 +27,16 @@ public class EthQuotesService : IEthQuotesService
 
         return new Metrics()
         {
-            BiggestUsdValue = biggestUsdValue,
-            SmallestUsdValue = smallestUsdValue,
-            AvgUsdValue = avgUsdValue,
-            AvgLastFiveMinutesUsdValue = avgLastFiveMinutesUsdValue,
-            AvgAmount = avgAmount
+            BiggestUsdValue = Math.Round(biggestUsdValue, 2, MidpointRounding.AwayFromZero),
+            SmallestUsdValue = Math.Round(smallestUsdValue, 2, MidpointRounding.AwayFromZero),
+            AvgUsdValue = Math.Round(avgUsdValue, 2, MidpointRounding.AwayFromZero),
+            AvgLastFiveMinutesUsdValue = Math.Round(avgLastFiveMinutesUsdValue, 2, MidpointRounding.AwayFromZero),
+            AvgAmount = Math.Round(avgAmount, 8, MidpointRounding.AwayFromZero)
         };
     }
 
-    private static int BiggestUsdValue(List<EthAsk> ethAsks) => ethAsks.Max(eth => eth.UsdValue);
-    private static int SmallestUsdValue(List<EthAsk> ethAsks) => ethAsks.Min(eth => eth.UsdValue);
+    private static decimal BiggestUsdValue(List<EthAsk> ethAsks) => ethAsks.Max(eth => eth.UsdValue);
+    private static decimal SmallestUsdValue(List<EthAsk> ethAsks) => ethAsks.Min(eth => eth.UsdValue);
     private static decimal AvgUsdValue(List<EthAsk> ethAsks) 
     {
         var totalUsdValue = ethAsks.Sum(eth => eth.UsdValue);

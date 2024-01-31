@@ -18,10 +18,12 @@ public class EthBidMap : IEntityTypeConfiguration<EthBid>
 
         builder.Property(c => c.UsdValue)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("UsdValue");
 
         builder.Property(c => c.Amount)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("Amount");
     }
 }

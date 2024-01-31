@@ -28,8 +28,8 @@ internal class WorkerInitializerJob
             //await Task.WhenAll(mediator.Send(new LoadQuoteBtcCommand()),
             //                   mediator.Send(new LoadQuoteEthCommand()));
 
-            //await mediator.Send(new LoadQuoteBtcCommand());
 
+            //await mediator.Send(new LoadQuoteBtcCommand());
             await mediator.Send(new LoadQuoteEthCommand());
         }
         else

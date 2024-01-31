@@ -21,23 +21,23 @@ namespace Digitas.QuotesMetrics.Function
         [Function("QuouteMetricFunction")]
         public async Task RunAsync([TimerTrigger("*/5 * * * * *")] MyInfo myTimer)
         {
-            logger.LogInformation($"Quotes at: {DateTime.Now}");
+            logger.LogInformation($"Quotes at: {DateTime.Now}\n\n\n");
             Metrics btcMetrics;
 
             btcMetrics = await btcQuoteService.GetBtcMetrics();
             logger.LogInformation($"Biggest BTC Price: {btcMetrics.BiggestUsdValue}");
             logger.LogInformation($"Smallest BTC Price: {btcMetrics.SmallestUsdValue}");
             logger.LogInformation($"Avg BTC Price: {btcMetrics.AvgUsdValue}");
-            logger.LogInformation($"Avg BTC Price: {btcMetrics.AvgLastFiveMinutesUsdValue}");
-            logger.LogInformation($"Avg BTC Price: {btcMetrics.AvgAmount}");
+            logger.LogInformation($"Avg Last five minuts Price: {btcMetrics.AvgLastFiveMinutesUsdValue}");
+            logger.LogInformation($"Avg BTC Amount: {btcMetrics.AvgAmount}\n\n\n");
 
 
             btcMetrics = await ethQuoteService.GetEthMetrics();
             logger.LogInformation($"Biggest ETH Price: {btcMetrics.BiggestUsdValue}");
             logger.LogInformation($"Smallest ETH Price: {btcMetrics.SmallestUsdValue}");
             logger.LogInformation($"Avg ETH Price: {btcMetrics.AvgUsdValue}");
-            logger.LogInformation($"Avg ETH Price: {btcMetrics.AvgLastFiveMinutesUsdValue}");
-            logger.LogInformation($"Avg ETH Price: {btcMetrics.AvgAmount}");
+            logger.LogInformation($"Avg ETH five minuts Price: {btcMetrics.AvgLastFiveMinutesUsdValue}");
+            logger.LogInformation($"Avg ETH Amount: {btcMetrics.AvgAmount}");
         }
     }
 
