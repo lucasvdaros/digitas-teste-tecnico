@@ -14,7 +14,7 @@ public class SimulationQuoteValueMap : IEntityTypeConfiguration<SimulationQuoteV
 
         builder.Property(c => c.UsdValue)
                 .IsRequired()
-                .HasPrecision(11, 8)
+                .HasColumnType("money")
                 .HasColumnName("UsdValue");
 
         builder.Property(c => c.Amount)

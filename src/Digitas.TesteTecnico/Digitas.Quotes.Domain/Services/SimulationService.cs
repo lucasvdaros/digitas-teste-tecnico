@@ -55,7 +55,7 @@ public class SimulationService : ISimulationService
                                                    (int)operationResult.Operation,
                                                    (int)coin,
                                                    operationResult.RequestAmount,
-                                                   Math.Round(operationResult.Result,8,MidpointRounding.AwayFromZero));
+                                                   Math.Round(operationResult.Result,2,MidpointRounding.AwayFromZero));
 
         var values = SimulationQuoteValue.SimulationValues(operationResult.Quotes!, simulationQuoute.SimulationQuoteId);        
         simulationQuoute.SimulationQuotesValues = values;
