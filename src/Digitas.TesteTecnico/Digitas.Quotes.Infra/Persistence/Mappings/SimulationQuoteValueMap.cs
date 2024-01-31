@@ -14,10 +14,12 @@ public class SimulationQuoteValueMap : IEntityTypeConfiguration<SimulationQuoteV
 
         builder.Property(c => c.UsdValue)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("UsdValue");
 
         builder.Property(c => c.Amount)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("Amount");
 
         builder.HasOne(o => o.SimulationQuote)

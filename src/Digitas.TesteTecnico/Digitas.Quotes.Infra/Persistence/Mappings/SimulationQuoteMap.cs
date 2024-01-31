@@ -26,10 +26,12 @@ public class SimulationQuoteMap : IEntityTypeConfiguration<SimulationQuote>
 
         builder.Property(c => c.RequestAmount)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("RequestAmount");        
 
         builder.Property(c => c.FinalResult)
                 .IsRequired()
+                .HasPrecision(11, 8)
                 .HasColumnName("FinalResult");        
     }
 }

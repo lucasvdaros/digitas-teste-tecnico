@@ -21,7 +21,7 @@ public static class ConfigureServices
     private static IServiceCollection AddDatabaseServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<SimulationDbContext>(options =>
-             options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=quotes;TrustServerCertificate=True;Persist Security Info=True;",
+             options.UseSqlServer(configuration.GetConnectionString("QuotesDb"),
          builder => builder.MigrationsAssembly(typeof(SimulationDbContext).Assembly.FullName)));
 
         return services;

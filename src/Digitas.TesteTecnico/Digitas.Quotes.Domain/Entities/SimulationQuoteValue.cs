@@ -7,11 +7,11 @@ public class SimulationQuoteValue
     public int SimulationQuoteValueId { get; set; }
     public int SimulationQuoteId { get; set; }
     public decimal Amount { get; set; }
-    public int UsdValue { get; set; }
+    public decimal UsdValue { get; set; }
 
     public virtual SimulationQuote? SimulationQuote { get; set; }
 
-    public SimulationQuoteValue(int simulationQuoteId, decimal amount, int usdValue)
+    public SimulationQuoteValue(int simulationQuoteId, decimal amount, decimal usdValue)
     {
         SimulationQuoteId = simulationQuoteId;
         Amount = amount;

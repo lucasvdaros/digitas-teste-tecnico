@@ -55,11 +55,14 @@ public class SimulationService : ISimulationService
                                                    (int)operationResult.Operation,
                                                    (int)coin,
                                                    operationResult.RequestAmount,
-                                                   operationResult.Result);
+                                                   Math.Round(operationResult.Result,8,MidpointRounding.AwayFromZero));
+
+        var values = SimulationQuoteValue.SimulationValues(operationResult.Quotes!, simulationQuoute.SimulationQuoteId);        
+        simulationQuoute.SimulationQuotesValues = values;
+
         await simulationQuoteRepository.AddAsync(simulationQuoute);
 
-        var values = SimulationQuoteValue.SimulationValues(operationResult.Quotes!, simulationQuoute.SimulationQuoteId);
-        await simulationQuoteValueRepository.AddRangeAsync(values);
+        //await simulationQuoteValueRepository.AddRangeAsync(values);
 
         uow.Commit();
     }
