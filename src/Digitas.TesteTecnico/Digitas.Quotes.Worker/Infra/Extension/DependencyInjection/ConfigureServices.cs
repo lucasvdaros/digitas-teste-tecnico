@@ -24,8 +24,8 @@ public static class ConfigureServices
 
     private static IServiceCollection AddDatabaseServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
-             options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=quotes;TrustServerCertificate=True;Persist Security Info=True;",
+        services.AddDbContext<ApplicationDbContext>(options =>             
+             options.UseSqlServer("Data Source=N1003729\\SQLEXPRESS;Initial Catalog=quotes;TrustServerCertificate=True;Persist Security Info=True;User ID=user_digitas_db;Password=senhalegal123",
          builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
         return services;
@@ -41,6 +41,7 @@ public static class ConfigureServices
     {
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBtcAskRepository, BtcAskRepository>();
+        services.AddScoped<IBtcBidRepository, BtcBidRepository>();
 
         return services;
     }

@@ -91,7 +91,7 @@ public class BitStampService : IBitStampService
 
             } while (!result.EndOfMessage);
 
-            logger.LogInformation(receivedMessage.ToString());
+            //logger.LogInformation(receivedMessage.ToString());
 
             return receivedMessage.ToString();
         }

@@ -7,6 +7,7 @@ using System.Text.Json;
 using Digitas.Quotes.Worker.Infra.ExternalServices.BitStamp.Interface;
 using Digitas.Quotes.Worker.Infra.ExternalServices.BitStamp.Responses;
 using Digitas.Quotes.Worker.Infra.ExternalServices.BitStamp.Requests;
+using System.Globalization;
 
 namespace Digitas.Quotes.Worker.Domain.Services;
 
@@ -14,15 +15,20 @@ public class LiveOrderBookService : ILiveOrderBookService
 {
     private readonly IBitStampService bitStamp;
     private readonly IBtcAskRepository btcAskRepository;
+    private readonly IBtcBidRepository btcBidRepository;
     private readonly IUnitOfWork uow;
 
     private readonly string btcChannel = "order_book_btcusd";
     private readonly string ethChannel = "order_book_ethusd";
 
-    public LiveOrderBookService(IUnitOfWork uow, IBitStampService bitStamp, IBtcAskRepository btcAskRepository)
+    public LiveOrderBookService(IUnitOfWork uow,
+                                IBitStampService bitStamp,
+                                IBtcAskRepository btcAskRepository,
+                                IBtcBidRepository btcBidRepository)
     {
         this.bitStamp = bitStamp;
         this.btcAskRepository = btcAskRepository;
+        this.btcBidRepository = btcBidRepository;
         this.uow = uow;
     }
 
@@ -49,22 +55,18 @@ public class LiveOrderBookService : ILiveOrderBookService
                     var newUpdatesData = JsonSerializer.Deserialize<BookOrderResponse>(receivedMessage);
 
                     var newAsks = ConvertAsksToPersist(newUpdatesData!.Data);
-                    //var newBids = ConvertBidsToPersist(newUpdatesData!.Data); 
+                    var newBids = ConvertBidsToPersist(newUpdatesData!.Data);
+
+                    Console.WriteLine($"Registering new {newAsks.Count} Asks");
+                    Console.WriteLine($"Registering new {newBids.Count} Bids");
 
                     await btcAskRepository.AddRange(newAsks);
-
-
+                    await btcBidRepository.AddRange(newBids);                    
 
                     uow.Commit();
                 }
             }
-        }
-
-        //Console.WriteLine($"3: Conection Response: {receivedMessage}");
-
-        //var confirmConnectionObject = JsonSerializer.Deserialize<BookOrderResponse>(receivedMessage);
-        //Console.WriteLine($"Evento recebido: {confirmConnectionObject!.Event}");
-        //Console.WriteLine($"Channel subscrito: {confirmConnectionObject!.Channel}");
+        }        
     }
 
     public async Task SearchCurrentEthBookOffers()
@@ -114,7 +116,7 @@ public class LiveOrderBookService : ILiveOrderBookService
             {
                 Microtimestamp = Convert.ToInt64(data.Microtimestamp),
                 UsdValue = Convert.ToInt32(ask[0]),
-                Amount = Convert.ToDecimal(ask[1])
+                Amount = Convert.ToDecimal(ask[1], CultureInfo.InvariantCulture)
             };
 
             BtcAsks.Add(newAsk);
@@ -133,7 +135,7 @@ public class LiveOrderBookService : ILiveOrderBookService
             {
                 Microtimestamp = Convert.ToInt64(data.Microtimestamp),
                 UsdValue = Convert.ToInt32(bid[0]),
-                Amount = Convert.ToInt32(bid[1])
+                Amount = Convert.ToDecimal(bid[1], CultureInfo.InvariantCulture)
             };
 
             BtcBids.Add(newBid);
