@@ -1,0 +1,16 @@
+version: '2.3'
+services:
+  quoutes-api:
+    build: .
+    ports:
+      - "5000:80"      
+  database:
+    build: 
+      context: .
+      dockerfile: Dockerfile-database
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Senh@Legal123
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"

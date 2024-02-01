@@ -19,7 +19,7 @@ public static class ConfigureServices
     private static IServiceCollection AddDatabaseServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<MetricDbContext>(options =>
-             options.UseSqlServer("Data Source=N1003729\\SQLEXPRESS;Initial Catalog=quotes;TrustServerCertificate=True;Persist Security Info=True;User ID=user_digitas_db;Password=senhalegal123",
+             options.UseSqlServer("Data Source=database\\SQLEXPRESS;Initial Catalog=quotes;TrustServerCertificate=True;Persist Security Info=True;User ID=sa;Password=Senh@Legal123",
          builder => builder.MigrationsAssembly(typeof(MetricDbContext).Assembly.FullName)));
 
         return services;
