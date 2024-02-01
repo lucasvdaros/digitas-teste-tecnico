@@ -6,8 +6,14 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Digitas.Quotes.Api/Digitas.Quotes.Api.csproj", "Digitas.Quotes.Api/"]
+COPY ["Digitas.Quotes.Application/Digitas.Quotes.Application.csproj", "Digitas.Quotes.Application/"]
+COPY ["Digitas.Quotes.Domain/Digitas.Quotes.Domain.csproj", "Digitas.Quotes.Domain/"]
+COPY ["Digitas.Quotes.Infra/Digitas.Quotes.Infra.csproj", "Digitas.Quotes.Infra/"]
 RUN dotnet restore "Digitas.Quotes.Api/Digitas.Quotes.Api.csproj"
-COPY . .
+COPY "Digitas.Quotes.Api/" "Digitas.Quotes.Api/"
+COPY "Digitas.Quotes.Application/" "Digitas.Quotes.Application/"
+COPY "Digitas.Quotes.Domain/" "Digitas.Quotes.Domain/"
+COPY "Digitas.Quotes.Infra/" "Digitas.Quotes.Infra/"
 WORKDIR "/src/Digitas.Quotes.Api"
 RUN dotnet build "Digitas.Quotes.Api.csproj" -c Release -o /app/build
 
