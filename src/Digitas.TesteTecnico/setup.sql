@@ -1,4 +1,6 @@
-CREATE TABLE dbo.BtcBid
+CREATE DATABASE quotes
+
+CREATE TABLE BtcBid
 	(
 		BtcBidId INT NOT NULL IDENTITY (1, 1),
 		Microtimestamp BIGINT NOT NULL,
@@ -6,17 +8,17 @@ CREATE TABLE dbo.BtcBid
 		Amount DECIMAL(11,8) NOT NULL
 	)  ON [PRIMARY]
 	
-	ALTER TABLE dbo.BtcBid
+	ALTER TABLE BtcBid
 	ADD CONSTRAINT
 		PK_BtcBidId PRIMARY KEY CLUSTERED 
 		(
 			BtcBidId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-	ALTER TABLE dbo.BtcBid 
+	ALTER TABLE BtcBid 
 	SET (LOCK_ESCALATION = TABLE)
 
-CREATE TABLE dbo.BtcAsk
+CREATE TABLE BtcAsk
 	(
 		BtcAskId INT NOT NULL IDENTITY (1, 1),
 		Microtimestamp BIGINT NOT NULL,
@@ -24,17 +26,17 @@ CREATE TABLE dbo.BtcAsk
 		Amount DECIMAL(11,8) NOT NULL
 	)  ON [PRIMARY]
 	
-	ALTER TABLE dbo.BtcAsk 
+	ALTER TABLE BtcAsk 
 	ADD CONSTRAINT
 		PK_BtcAskId PRIMARY KEY CLUSTERED 
 		(
 			BtcAskId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-	ALTER TABLE dbo.BtcBid 
+	ALTER TABLE BtcBid 
 	SET (LOCK_ESCALATION = TABLE)
 
-CREATE TABLE dbo.EthBid
+CREATE TABLE EthBid
 	(
 		EthBidId INT NOT NULL IDENTITY (1, 1),
 		Microtimestamp BIGINT NOT NULL,
@@ -42,17 +44,17 @@ CREATE TABLE dbo.EthBid
 		Amount DECIMAL(11,8) NOT NULL
 	)  ON [PRIMARY]
 	
-	ALTER TABLE dbo.EthBid
+	ALTER TABLE EthBid
 	ADD CONSTRAINT
 		PK_EthBidId PRIMARY KEY CLUSTERED 
 		(
 			EthBidId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-	ALTER TABLE dbo.EthBid 
+	ALTER TABLE EthBid 
 	SET (LOCK_ESCALATION = TABLE)
 
-CREATE TABLE dbo.EthAsk
+CREATE TABLE EthAsk
 	(
 		EthAskId INT NOT NULL IDENTITY (1, 1),
 		Microtimestamp BIGINT NOT NULL,
@@ -60,19 +62,19 @@ CREATE TABLE dbo.EthAsk
 		Amount DECIMAL(11,8) NOT NULL
 	)  ON [PRIMARY]
 	
-	ALTER TABLE dbo.EthAsk 
+	ALTER TABLE EthAsk 
 	ADD CONSTRAINT
 		PK_EthAskId PRIMARY KEY CLUSTERED 
 		(
 			EthAskId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-	ALTER TABLE dbo.EthAsk
+	ALTER TABLE EthAsk
 	SET (LOCK_ESCALATION = TABLE)
 
 
 
-CREATE TABLE dbo.SimulationQuote
+CREATE TABLE SimulationQuote
 	(
 		SimulationQuoteId INT NOT NULL IDENTITY (1, 1),
 		SimulationQuoteHashIdentifier NVARCHAR(64) NOT NULL,
@@ -82,20 +84,20 @@ CREATE TABLE dbo.SimulationQuote
 		FinalResult DECIMAL(11,8) NOT NULL
 	)  ON [PRIMARY]
 	
-ALTER TABLE dbo.SimulationQuote 
+ALTER TABLE SimulationQuote 
 ADD CONSTRAINT
 		PK_SimulationQuote PRIMARY KEY CLUSTERED 
 		(
 			SimulationQuoteId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-ALTER TABLE dbo.SimulationQuote 
+ALTER TABLE SimulationQuote 
 SET (LOCK_ESCALATION = TABLE)
 
 
 -- #############################
 
-CREATE TABLE dbo.SimulationQuoteValue
+CREATE TABLE SimulationQuoteValue
 (
 	SimulationQuoteValueId INT NOT NULL IDENTITY (1, 1),
 	SimulationQuoteId INT NOT NULL,
@@ -103,25 +105,25 @@ CREATE TABLE dbo.SimulationQuoteValue
 	UsdValue money NOT NULL
 )ON [PRIMARY]
 
-ALTER TABLE dbo.SimulationQuoteValue 
+ALTER TABLE SimulationQuoteValue 
 	ADD CONSTRAINT
 		PK_SimulationQuoteValueId PRIMARY KEY CLUSTERED 
 		(
 			SimulationQuoteValueId
 		) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 
-ALTER TABLE dbo.SimulationQuoteValue 
+ALTER TABLE SimulationQuoteValue 
 	ADD CONSTRAINT
 		FK_SimulationQuote_SimulationQuoteValue FOREIGN KEY
 		(
 			SimulationQuoteId
-		) REFERENCES dbo.SimulationQuote
+		) REFERENCES SimulationQuote
 		(
 			SimulationQuoteId
 		) ON UPDATE  NO ACTION 
 		 ON DELETE  NO ACTION 
 
-ALTER TABLE dbo.SimulationQuoteValue 
+ALTER TABLE SimulationQuoteValue 
 SET (LOCK_ESCALATION = TABLE)
 
 
