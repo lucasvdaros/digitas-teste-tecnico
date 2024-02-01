@@ -5,9 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Digitas.Quotes.Worker/Digitas.Quotes.Worker.csproj", "Digitas.Quotes.Worker/"]
+COPY ["Digitas.Quotes.Worker.csproj", "Digitas.Quotes.Worker/"]
 RUN dotnet restore "Digitas.Quotes.Worker/Digitas.Quotes.Worker.csproj"
-COPY . .
+COPY "Digitas.Quotes.Worker/" .
 WORKDIR "/src/Digitas.Quotes.Worker"
 RUN dotnet build "Digitas.Quotes.Worker.csproj" -c Release -o /app/build
 

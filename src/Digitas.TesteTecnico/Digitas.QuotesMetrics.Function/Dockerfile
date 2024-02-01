@@ -6,9 +6,9 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["Digitas.QuotesMetrics.Function/Digitas.QuotesMetrics.Function.csproj", "Digitas.QuotesMetrics.Function/"]
+COPY ["Digitas.QuotesMetrics.Function.csproj", "Digitas.QuotesMetrics.Function/"]
 RUN dotnet restore "Digitas.QuotesMetrics.Function/Digitas.QuotesMetrics.Function.csproj"
-COPY . .
+COPY . "Digitas.QuotesMetrics.Function/"
 WORKDIR "/src/Digitas.QuotesMetrics.Function"
 RUN dotnet build "Digitas.QuotesMetrics.Function.csproj" -c Release -o /app/build
 
